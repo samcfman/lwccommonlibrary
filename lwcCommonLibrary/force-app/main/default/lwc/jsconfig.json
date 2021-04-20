@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/goToHome": [
+                "goToHome/goToHome.js"
+            ],
+            "c/signaturePad": [
+                "signaturePad/signaturePad.js"
+            ],
+            "c/myFileUpload": [
+                "myFileUpload/myFileUpload.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    },
+    "paths": {
+        "c/*": [
+            "*"
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title={title} icon-name="custom:custom19">
+        <div class="slds-var-m-around_medium slds-box">
+            <canvas class="signature-pad" width={canvasWidth} height={canvasHeight} lwc:dom="manual"></canvas>
+        </div>
+    </lightning-card>
+    <template if:false={signed}>
+        <lightning-button class="slds-var-m-around_medium" label=Sign onclick={handleClick}></lightning-button>
+    </template>
+    <lightning-button class="slds-var-m-around_medium" label=Clear onclick={handleClear}></lightning-button>
+</template>

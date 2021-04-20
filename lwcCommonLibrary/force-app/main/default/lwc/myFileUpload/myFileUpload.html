@@ -1,0 +1,30 @@
+<template>
+    <div class="slds-p-around_none slds-m-top_none slds-m-bottom_none slds-m-horizontal_none">
+        <lightning-layout>
+            <lightning-layout-item size="12" class="slds-var-p-bottom_small citiFileUpload">
+                <lightning-file-upload 
+                    label={description}                  
+                    name="fileUploader"
+                    accept={acceptedFormats}
+                    record-id={relatedrecordid}
+                    onuploadfinished={handleUploadFinished}
+                    >
+                </lightning-file-upload>  
+                <template if:true={hasFiles}>
+                    <div class="slds-var-m-vertical_medium" style="float: left; width:50%">
+                        <p>Attachment: <lightning-formatted-url value={fileurl}  label={fileName} target="_blank" ></lightning-formatted-url></p>                                   
+                    </div> 
+                    <div style="float: right; width:50%"><img src={ticklogourl}></div>   
+                </template>                 
+
+                <!--div class="slds-p-around_medium" if:true={hasFiles}>
+                    Attachments:<br/>
+                    <template for:each={uploadedFiles} for:item="file" >
+                        <a key = "{file.documentId}" href={file.downloadLink}>{file.name}</a><br key={file.documentId}/>
+                    </template>
+                    
+                </div-->
+            </lightning-layout-item>
+        </lightning-layout> 
+    </div>
+</template>
